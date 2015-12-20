@@ -1,0 +1,237 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  background-size: 30px 30px;
+  background-color: #FFFBA0;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, #FFFAE2), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(left, #FFFAE2 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(left, #FFFAE2 50%, transparent 50%, transparent);
+  background-image: linear-gradient(left, #FFFAE2 50%, transparent 50%, transparent);
+}
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+  font-size: 5em;
+  text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.7);
+}
+.box {
+  background-color: rgb(255, 253, 75);
+  padding-bottom: 10px;
+}
+.box_wrapper {
+  background-color: #3e1919;
+  background-repeat: repeat-y;
+  color: white;
+  margin: auto 0;
+  padding: 0px;
+}
+@media (min-width: 768px) {
+  .box_wrapper, .box3 {
+    min-height : calc(100vh - 60px - 87px - 18px);
+  }
+  .box3 {
+   padding: 5%;
+   }
+  .footer {
+    padding: 20px 0 10px 0;
+  }
+  /*Written by 6h1sa*/
+  .slideMenuBtn,
+  .slideMenuLayer {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .box3 {
+  padding: 2%;
+  }
+  body {
+    position: relative;
+    top: 0;
+    overflow-x: hidden;
+  }
+  .slideMenuBtn {
+    z-index: 9999;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    font-family: 'Dancing Script', cursive;
+    padding: 14px;
+    background: rgba(255, 251, 160, 0.71);;
+  }
+  .slideMenu {
+    z-index: 9800;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background: #3e1919;
+  }
+  .slideMenuLayer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9700;
+    width: 100%;
+    height: 100%;
+  }
+  body .menu-open,
+  .box.menu-open,
+  .box3.menu-open {
+    overflow: hidden;
+  }
+}
+.box2 {
+  padding: 5px;
+}
+.box3 {
+  color: #333;
+  background-color: white;
+  margin: 0px;
+  overflow:hidden;
+  /*padding: 2%;*/
+}
+.top {
+  margin: 0px;
+  padding-top: 0px;
+  height: 8px;
+  background-color: #ff00b0;
+  border: none;
+}
+.footer {
+  /*height: 20px;*/
+  overflow: hidden;
+  text-align: center;
+  background-color: #3e1919;
+  color: white;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+h2,h3 {
+  /*こころぴょんぴょん!*/
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);;
+}
+/*メニュー*/
+.menu {
+  display: inline-block;
+  border: 2px solid #fff;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
+.menu::before,
+.menu::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.menu,
+.menu::before,
+.menu::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.menu:hover, .menu:focus {
+  background-color: #794f4f;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+p, h4, h5 {
+  font-family: 'Noto Sans Japanese', serif;
+}
+p {
+  font-weight: 200;
+  font-size: 1em;
+}
+h1, h2, h3, h4 {
+    margin-top: 0px;
+}
+.pop {
+  /*position: absolute;*/
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  /*transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);*/
+}
+h3 {
+  font-size: 4em;
+}
+.content {
+  margin: 30px 0px 10px 0px;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.active {
+  background-color: #794f4f;
+}
+/*ソーシャルメディアボタン*/
+.sns {
+  /*position: absolute;
+	overflow: hidden;*/
+  list-style:none;
+  margin-top: 5%;
+  padding: 0px;
+  position:static;
+}
+.sns li {
+	float: left;
+  margin: 2px 2px 5px 2px;
+}
+.sns iframe {
+	margin: 0 !important;
+}
+h5 {
+  font-size: 1.4em;
+}
+.title {
+  text-align: center;
+}
+.price {
+  text-align: right;
+}
+.thumbnail {
+  margin: 3px;
+  border-color: rgb(170, 170, 170);
+  box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.3);
+  -webkit-transition: all .3s;
+	transition: all .3s;
+}
+.thumbnail:focus, .thumbnail:hover {
+  border-color: rgba(0, 41, 255, 0.5);
+  box-shadow: 1px 1px 3px rgba(0, 20, 255, 0.3);
+  background-color: rgba(255, 255, 0, 0.3);
+}
+.thumbnail p {
+  padding: 0px !important;
+}
+.thumbnail h5 {
+  padding: 2px !important;
+}
+/* Written by softhat */
+.mainContent{
+  display: none;
+}
