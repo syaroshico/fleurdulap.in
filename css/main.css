@@ -30,6 +30,19 @@ h1 {
   margin: auto 0;
   padding: 0px;
 }
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #FAF6C5;
+}
+#loader-bg {
+  margin: auto;
+  background: url(../img/load.gif) #FAF6C5 center no-repeat;
+}
 @media (min-width: 768px) {
   .box_wrapper, .box3 {
     min-height: calc(100vh - 60px - 87px - 18px);
@@ -54,7 +67,7 @@ h1 {
     overflow-x: hidden;
   }
   .slideMenuBtn {
-    z-index: 9999;
+    z-index: 9900;
     position: fixed;
     bottom: 10px;
     left: 0;
