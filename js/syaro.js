@@ -14,6 +14,16 @@ $(function() {
                 $(this).addClass("animated shake");
             }
         },
+        "contextmenu": function() {
+            alert('きゃっ！なにする気ですか！');
+            if($(this).hasClass("animated bounce")){
+                waitShake = true;
+            }
+            else{
+                $(this).addClass("animated shake");
+            }
+            return false;
+        },
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend": function() {
             $(this).removeClass("animated bounce shake");
             if(waitShake){
