@@ -12,6 +12,7 @@ $(function() {
             }
             else{
                 $(this).addClass("animated shake");
+                navigator.vibrate(1000);
             }
         },
         "contextmenu": function() {
@@ -29,6 +30,7 @@ $(function() {
             if(waitShake){
                 waitShake = false;
                 $(this).addClass("animated shake");
+                navigator.vibrate(1000);
             }
         }
     });
