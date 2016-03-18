@@ -1,0 +1,18 @@
+// main: ./5_style.less
+@media (min-width: (@mobileL + 1px)) and (max-width: (@tablet)) {
+  .nav {
+    margin: 0 auto;
+
+    &__list {
+      .justify-content(space-around);
+      .flex-wrap(wrap);
+    }
+  }
+
+  .menu {
+    &__item {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+}
