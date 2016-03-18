@@ -16,7 +16,10 @@ function getBrowser() {
     }else {
       name = 'ie';
     }
+  }else if (ua.indexOf('trident') != -1) {
+    name = 'ie';
   }
+
   return name;
 }
 window.addEventListener('DOMContentLoaded', function() {
