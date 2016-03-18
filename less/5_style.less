@@ -1,0 +1,225 @@
+// out: ../css/style.css, sourcemap: true, compress: true
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
+@import './0_mixin.less';
+@import './4_default.less';
+
+@link: #0095dd;
+@link2 : #5db7e3;
+
+@headerTitle: #ff8a24;
+@headerTitleFont: 'Futura', 'Josefin Sans', 'Avenir Next', 'Avenir';
+@headerBg: #9c9175 url(../img/black-linen.png);
+/* www.transparenttextures.com/black-linen.html */
+@navBg: #9c9175 url(../img/black-linen.png);
+@navlink: #9addff;
+@navlink2: #2b5760;
+
+@menuItemBg: #fff0cc url(../img/clean-gray-paper.png);
+/* www.transparenttextures.com/clean-gray-paper.html */
+@footerColor: #FFF5C4;
+@footerBg: #9c9175 url(../img/black-linen.png);
+a {
+  color: @link;
+  .transition(all, .4s);
+
+  &:visited {
+    color: @link2;
+  }
+  &:hover {
+    color: @link2;
+    .transition(all, .4s);
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  padding-top: 16px;
+  box-shadow: 0 2px 3px #333;
+  background: @headerBg;
+
+  &__title {
+    margin: 0 auto;
+    text-align: center;
+    font: 2.8em/1.2 @headerTitleFont;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    > a {
+      display: inline-block;
+      padding: 0;
+      color: @headerTitle;
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+.nav {
+  background: @navBg;
+
+  &__link {
+    display: inline-block;
+    padding: 1rem .5rem;
+    color: @navlink;
+    &--active {
+      color: @navlink2;
+    }
+  }
+  &__list {
+    margin: 0;
+    list-style-type: none;
+
+    position: relative;
+    top: 0;
+    z-index: 99;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+
+    .flex();
+    .flex-flow(row, nowrap);
+    .justify-content(center);
+  }
+  &__item {
+    margin: 0;
+  }
+  &--fixed {
+    box-shadow: 0 2px 3px #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+}
+
+.main {
+  margin: 8px;
+  font-size: 1em;
+}
+
+.article {
+  &--show {
+    display: block;
+  }
+  &--hide {
+    display: none;
+  }
+}
+
+.menu{
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    .flex();
+    .flex-flow(row, wrap);
+    .justify-content(space-around);
+    .align-items(flex-start);
+
+  }
+  &__item {
+    margin: 0 0 8px 0;
+    padding: 0;
+    width: 140px;
+    color: #424242;
+    background: @menuItemBg;
+    box-shadow: 1px 2px 3px #bbb;
+     > h3,
+     > h4 {
+      margin: 4px auto;
+      padding: 0;
+      text-align: center;
+      font-weight: normal;
+    }
+     > h4 {
+       font-size: 1.5ex;
+       line-height: 1;
+     }
+     > img {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.price {
+  text-align: right;
+}
+.jpy {
+  &::before {
+    display: inline-block;
+    content: '￥';
+  }
+}
+.eur {
+  &::before {
+    display: inline-block;
+    content: '€';
+  }
+}
+
+.footer {
+  margin: 0;
+  padding: 1rem;
+  color: @footerColor;
+  background: @footerBg;
+
+  &__say {
+    text-align: center;
+  }
+
+  &::before {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+.share {
+  &__list {
+    list-style-type: none;
+    line-height: 1;
+    .flex();
+    .flex-flow(row, wrap);
+    .justify-content(flex-end);
+    .align-items(flex-end);
+    .align-content(flex-end);
+  }
+  &__item {
+    margin: 2px 2px;
+    padding: 0;
+  }
+}
+
+#syaro {
+  &--pyonpyon {
+    width: 45%;
+    float: left;
+  }
+}
+
+#ar1 {
+  &::after {
+    .clearfix();
+  }
+}
+@mobileS: 320px;
+@mobileM: 375px;
+@mobileL: 425px;
+@tablet:  768px;
+@laptop:  1024px;
+@laptopL: 1440px;
+
+@import './6_mobile.less';
+@import './7_tablet.less';
+@import './8_laptop.less';
+// @import './9_2k.less';
