@@ -34,11 +34,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
         var showArticle = articleEle.item(j);
         showArticle.classList.add('article--show');
+        showArticle.classList.remove('animated', 'fadeOut');
+        showArticle.classList.add('animated', 'fadeIn');
         showArticle.classList.remove('article--hide');
         navLinkEle.item(j).classList.add('nav__link--active');
 
         for (var k = 0; k < articleEle.length; k++) {
           if (! articleEle.item(k).isEqualNode(showArticle)) {
+            articleEle.item(k).classList.remove('animated', 'fadeIn');
+            articleEle.item(k).classList.add('animated', 'fadeOut');
             articleEle.item(k).classList.remove('article--show');
             navLinkEle.item(k).classList.remove('nav__link--active');
             articleEle.item(k).classList.add('article--hide');
@@ -50,6 +54,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   }
   articleEle.item(0).classList.remove('article--hide');
+  articleEle.item(0).classList.add('animated', 'fadeIn');
 
   var navEle = document.getElementById('nav');
   var headerEle = document.getElementById('header');
