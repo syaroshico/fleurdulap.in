@@ -1,0 +1,33 @@
+// main: ./5_style.less
+@media (min-width: (@tablet + 1px) ) {
+  .main,
+  .article {
+    max-width: @tablet;
+    margin: 0 auto;
+
+    font-size: 110%;
+  }
+
+  .nav {
+    width: 100%;
+    &__list {
+      .flex-wrap(wrap);
+      .justify-content(space-around);
+      max-width: @tablet;
+      margin: 0 auto;
+
+      overflow: visible;
+    }
+  }
+
+  .menu {
+    &__list {
+      font-size: 1rem;
+    }
+    &__item {
+      margin: 0 0 1rem 0;
+      width: 156px;
+    }
+  }
+
+}

@@ -1,0 +1,69 @@
+.flex () {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.flex-direction (@x:row) {
+  -webkit-flex-direction: @x;
+  -moz-flex-direction: @x;
+  -ms-flex-direction: @x;
+  -o-flex-direction: @x;
+  flex-direction: @x;
+}
+
+.flex-wrap (@x:nowrap) {
+  -webkit-flex-wrap: @x;
+  -moz-flex-wrap: @x;
+  -ms-flex-wrap: @x;
+  -o-flex-wrap: @x;
+  flex-wrap: @x;
+}
+
+.flex-flow (@x:row, @y:nowrap) {
+  -webkit-flex-flow: @x @y;
+  -moz-flex-flow: @x @y;
+  -ms-flex-flow: @x @y;
+  -o-flex-flow: @x @y;
+  flex-flow: @x @y;
+}
+
+.justify-content (@x:flex-start) {
+  -webkit-justify-content: @x;
+  -moz-justify-content: @x;
+  -ms-justify-content: @x;
+  -o-justify-content: @x;
+  justify-content: @x;
+}
+
+.align-items (@x:stretch) {
+  -webkit-align-items: @x;
+  -moz-align-items: @x;
+  -ms-align-items: @x;
+  -o-align-items: @x;
+  align-items: @x;
+}
+
+.align-content (@x:stretch) {
+  -webkit-align-content: @x;
+  -moz-align-content: @x;
+  -ms-align-content: @x;
+  -o-align-content: @x;
+  align-content: @x;
+}
+
+.transition (@prop:all, @dura:.5s, @fun:ease) {
+  -webkit-transition: @prop @dura @fun;
+  -moz-transition: @prop @dura @fun;
+  -ms-transition: @prop @dura @fun;
+  -o-transition: @prop @dura @fun;
+  transition: @prop @dura @fun;
+}
+
+.clearfix () {
+  display: block;
+  clear: both;
+  content: '';
+}

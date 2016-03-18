@@ -1,0 +1,72 @@
+
+body {
+  min-width: 250px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #444;
+  background:  #FFF5C4  url(../img/cardboard.png);
+
+  font: 100%/1.7 Verdana, Roboto, 'Yu Gothic UI', '游ゴシック体', 'Yu Gothic', YuGothic,'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Koruri','Meiryo UI', 'メイリオ', Meiryo, Osaka, sans-serif;
+  /* www.transparenttextures.com/cardboard.html */
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, dl {
+  margin: 1rem auto 1rem auto;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Futura', 'Josefin Sans', 'Avenir Next', 'Avenir', 'Yu Gothic UI', '游ゴシック体', 'Yu Gothic', YuGothic,'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Koruri','Meiryo UI', 'メイリオ', Meiryo, Osaka, sans-serif;
+}
+
+article,
+section {
+  font-size: 1em;
+}
+
+@h1fs: 2.4em;
+article {
+  > h1 {
+    font-size: @h1fs;
+  }
+  > h2 {
+    font-size: @h1fs - .2em;
+  }
+  > h3 {
+    font-size: @h1fs - .4em;
+  }
+  > h4 {
+    font-size: @h1fs - .6em;
+  }
+  > h5 {
+    font-size: @h1fs - .8em;
+  }
+  p,
+  ul,
+  dl {
+    margin: auto .8em;
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+section {
+  > h1 {
+    font-size: @h1fs - .2em;
+  }
+  > h2 {
+    font-size: @h1fs - .4em;
+  }
+  > h3 {
+    font-size: @h1fs - .6em;
+  }
+  > h4 {
+    font-size: @h1fs - .8em;
+  }
+  p,
+  ul {}
+}
