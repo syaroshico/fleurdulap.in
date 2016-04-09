@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700);
 body {
   min-width: 250px;
   margin: 0;
   padding: 0;
   color: #444;
   background: #FFF5C4 url(../img/cardboard.png);
-  font: 100%/1.7 Verdana, Roboto, 'Yu Gothic UI', '游ゴシック体', 'Yu Gothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Meiryo UI', 'メイリオ', Meiryo, Osaka, sans-serif;
+  font: 100%/1.7 Verdana, Roboto, 'Open Sans', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, sans-serif;
   /* www.transparenttextures.com/cardboard.html */
 }
 h1,
@@ -28,7 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Futura', 'Josefin Sans', 'Avenir Next', 'Avenir', 'Yu Gothic UI', '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Koruri', 'Meiryo UI', 'メイリオ', Meiryo, Osaka, sans-serif;
+  font-family: 'Josefin Sans', 'Avenir Next', 'Avenir', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', '游ゴシック体', 'Yu Gothic', 'メイリオ', Meiryo, Osaka, sans-serif;
+  font-weight: 400;
 }
 article,
 section {
@@ -90,9 +91,6 @@ a:hover {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.wrapper {
-  min-height: 100vh;
-}
 .header {
   margin: 0;
   padding: 0;
@@ -103,8 +101,8 @@ a:hover {
 .header__title {
   margin: 0 auto;
   text-align: center;
-  font: 2.8em/1.2 'Futura', 'Josefin Sans', 'Avenir Next', 'Avenir';
-  font-weight: 400;
+  font: 2.8em/1.2 'Josefin Sans', 'Avenir Next', 'Avenir';
+  font-weight: 600;
   letter-spacing: 2px;
 }
 .header__title > a {
@@ -121,9 +119,12 @@ a:hover {
   display: inline-block;
   padding: 1rem .5rem;
   color: #9addff;
+  font-family: 'Josefin Sans';
+  font-weight: 600;
 }
 .nav__link--active {
-  color: #2b5760;
+  color: #5DB7E3;
+  font-weight: 400;
 }
 .nav__list {
   margin: 0;
@@ -195,30 +196,34 @@ a:hover {
   -ms-justify-content: space-around;
   -o-justify-content: space-around;
   justify-content: space-around;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  -o-align-items: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: strech;
+  -moz-align-items: strech;
+  -ms-align-items: strech;
+  -o-align-items: strech;
+  align-items: strech;
 }
 .menu__item {
   margin: 0 0 8px 0;
-  padding: 0;
+  padding: 8px 0;
   width: 140px;
   color: #424242;
+  line-height: 1.1;
   background: #fff0cc url(../img/clean-gray-paper.png);
   box-shadow: 1px 2px 3px #bbb;
 }
 .menu__item > h3,
 .menu__item > h4 {
-  margin: 4px auto;
+  margin: 4px 2px;
   padding: 0;
   text-align: center;
   font-weight: normal;
 }
+.menu__item > h3 {
+  font-weight: 400;
+}
 .menu__item > h4 {
   font-size: 1.5ex;
-  line-height: 1;
+  font-weight: 300;
 }
 .menu__item > img {
   display: block;
@@ -227,12 +232,15 @@ a:hover {
 }
 .price {
   text-align: right;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .jpy::before {
+  font-family: 'Josefin Sans', sans-serif;
   display: inline-block;
-  content: '￥';
+  content: '¥';
 }
 .eur::before {
+  font-family: 'Josefin Sans', sans-serif;
   display: inline-block;
   content: '€';
 }
@@ -296,9 +304,17 @@ a:hover {
   .menu__list {
     margin: 0;
     padding: 0;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
   }
-  .menu__list > li {
+  .menu__item {
     margin: 0 0 8px 0;
+  }
+  .menu__item > h3 {
+    font-weight: 600;
   }
 }
 @media (min-width: 426px) and (max-width: 768px) {
