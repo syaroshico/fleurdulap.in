@@ -1,5 +1,5 @@
 // out: ../css/style.css, sourcemap: true, compress: true
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700);
 @import './0_mixin.less';
 @import './4_default.less';
 
@@ -7,12 +7,12 @@
 @link2 : #5db7e3;
 
 @headerTitle: #ff8a24;
-@headerTitleFont: 'Futura', 'Josefin Sans', 'Avenir Next', 'Avenir';
+@headerTitleFont: 'Josefin Sans', 'Avenir Next', 'Avenir';
 @headerBg: #9c9175 url(../img/black-linen.png);
 /* www.transparenttextures.com/black-linen.html */
 @navBg: #9c9175 url(../img/black-linen.png);
 @navlink: #9addff;
-@navlink2: #2b5760;
+@navlink2: #5DB7E3;
 
 @menuItemBg: #fff0cc url(../img/clean-gray-paper.png);
 /* www.transparenttextures.com/clean-gray-paper.html */
@@ -32,7 +32,6 @@ a {
 }
 
 .wrapper {
-  min-height: 100vh;
 }
 
 .header {
@@ -46,7 +45,7 @@ a {
     margin: 0 auto;
     text-align: center;
     font: 2.8em/1.2 @headerTitleFont;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 2px;
 
     > a {
@@ -68,8 +67,11 @@ a {
     display: inline-block;
     padding: 1rem .5rem;
     color: @navlink;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
     &--active {
       color: @navlink2;
+      font-weight: 400;
     }
   }
   &__list {
@@ -129,28 +131,32 @@ a {
     .flex();
     .flex-flow(row, wrap);
     .justify-content(space-around);
-    .align-items(flex-start);
+    .align-items(strech);
 
   }
   &__item {
     margin: 0 0 8px 0;
-    padding: 0;
+    padding: 8px 0;
     width: 140px;
     color: #424242;
+    line-height: 1.1;
     background: @menuItemBg;
     box-shadow: 1px 2px 3px #bbb;
-     > h3,
-     > h4 {
-      margin: 4px auto;
+    > h3,
+    > h4 {
+      margin: 4px 2px;
       padding: 0;
       text-align: center;
       font-weight: normal;
     }
-     > h4 {
-       font-size: 1.5ex;
-       line-height: 1;
+    > h3 {
+      font-weight: 400;
      }
-     > img {
+    > h4 {
+      font-size: 1.5ex;
+      font-weight: 300;
+     }
+    > img {
       display: block;
       width: 95%;
       margin: 0 auto;
@@ -160,15 +166,18 @@ a {
 
 .price {
   text-align: right;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .jpy {
   &::before {
+    font-family: 'Josefin Sans', sans-serif;
     display: inline-block;
-    content: '￥';
+    content: '¥';
   }
 }
 .eur {
   &::before {
+    font-family: 'Josefin Sans', sans-serif;
     display: inline-block;
     content: '€';
   }
